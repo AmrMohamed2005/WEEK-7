@@ -1,0 +1,5 @@
+SELECT s2.student_id , s2.subject , s1.score as first_score , s2.score as latest_score 
+from Scores s1  join Scores s2
+on s2.exam_date > s1.exam_date and s2.subject = s1.subject and s2.student_id = s1.student_id
+where s2.score > s1.score
+order by s2.student_id , s2.subject asc
