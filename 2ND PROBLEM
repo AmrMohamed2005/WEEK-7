@@ -1,0 +1,4 @@
+SELECT * 
+FROM products 
+where description ~'SN[0-9]{4}-[0-9]{4}(\s|$)'
+order by product_id asc
