@@ -1,0 +1,5 @@
+select contest_id, 
+round(100.0*count(user_id) / (select count(*) from Users),2 ) AS Percentage
+from Register
+GROUP by contest_id
+ORDER BY Percentage DESC, contest_id ASC;
